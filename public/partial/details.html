@@ -1,0 +1,44 @@
+<h3> Details </h3>
+
+<form role="form" name="detailsForm" id="detailsForm">
+  <div class="form-group">
+      <label >User ID:</label>
+      <label >{{tweet.fromUser}}</label>
+  </div>
+    <div class="form-group">
+      <label >User Name:</label>
+      <label >{{tweet.fromUserName}}</label>
+  </div>
+    <div class="form-group">
+      <label >Text:</label>
+      <label >{{tweet.text}}</label>
+  </div>
+    <div class="form-group">
+      <label >Latitude:</label>
+      <label >{{tweet.latitude}}</label>
+  </div>
+    <div class="form-group">
+      <label >Longitude:</label>
+      <label >{{tweet.longitude}}</label>
+  </div>
+    <div class="form-group">
+      <label >Created At:</label>
+      <label >{{tweet.createdAt}}</label>
+  </div>
+    <div class="form-group">
+      <label >Comments:</label>
+      <label >{{commentText}}</label>
+  </div>
+  <div class="form-group">
+      <input type="text" class="form-control" id="inputComment" ng-model="details.comment">
+      
+  </div>
+  <div>
+    <span><button type="submit" class="btn btn-primary" ng-click="addComment()">Add Comment</button></span>
+    <span ui-sref="search"><button class="btn btn-default">Search Again</button>
+    </span>
+  </div>
+    <div><label >Location Map:</label></div>
+    <div id="map"></div>
+    
+</form>
